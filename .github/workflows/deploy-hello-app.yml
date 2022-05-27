@@ -60,6 +60,7 @@ jobs:
       run: |-
         cd /home/runner/work/kubernetes-engine-samples/kubernetes-engine-samples/hello-app
         pwd
+        ls
         docker build \
           --tag "eu.gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
