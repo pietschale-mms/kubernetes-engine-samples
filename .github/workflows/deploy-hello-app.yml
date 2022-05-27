@@ -45,6 +45,10 @@ jobs:
         location: ${{ env.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
 
+    # Move into app directory
+    - name: Move into app directory
+      run: cd hello-app/
+
     # Build the Docker image
     - name: Build
       run: |-
